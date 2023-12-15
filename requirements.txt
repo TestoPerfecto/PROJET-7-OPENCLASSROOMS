@@ -4,7 +4,7 @@ idna==3.4
 requests==2.31.0
 urllib3==2.1.0
 
-streamlit==1.27.2
+streamlit==1.29.0
 pandas==1.5.3
 numpy==1.23.5
 seaborn==0.12.2
