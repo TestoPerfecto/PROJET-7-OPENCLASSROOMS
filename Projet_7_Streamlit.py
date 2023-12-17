@@ -8,7 +8,7 @@ Created on Fri Nov 17 16:56:25 2023
 # -*- coding: utf-8 -*-
 
 import streamlit as st
-#import streamlit-shap as st_shap
+from streamlit-shap import st_shap
 import pandas as pd
 import numpy as np
 import seaborn as sns 
@@ -28,12 +28,32 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 PATH = 'C:/Users/PERFECTO/'
 
 # Chargeons les datasets
-X_train_1 = pd.read_csv(PATH+'X_train_smtomek_sd.csv' )
-y_train_1 = pd.read_csv(PATH+'y_train_smtomek_sd.csv' )
-X_valid_1 = pd.read_csv(PATH+'X_valid_smtomek_sd.csv' )
-y_valid_1 = pd.read_csv(PATH+'y_valid_smtomek_sd.csv' )
 
-X_test = pd.read_csv(PATH+"X_test_feat.csv")
+#X_train_1 = pd.read_csv('X_train_smtomek_sd.csv')
+# On scinde 'X_train_smtomek_sd.csv' trop volumineux en 2
+X_tr_1 = pd.read_csv('X_train_smtomek_sd_1.csv')
+X_tr_2 = pd.read_csv('X_train_smtomek_sd_2.csv')
+X_train_1 = pd.concat([X_tr_1,X_tr_2])
+y_train_1 = pd.read_csv('y_train_smtomek_sd.csv')
+
+#X_valid_1 = pd.read_csv('X_valid_smtomek_sd.csv')
+# On scinde 'X_valid_smtomek_sd.csv' trop volumineux en 2
+X_vl_1 = pd.read_csv('X_valid_smtomek_sd_1.csv')
+X_vl_2 = pd.read_csv('X_valid_smtomek_sd_2.csv')
+X_valid_1 = pd.concat([X_vl_1,X_vl_2])
+y_valid_1 = pd.read_csv('y_valid_smtomek_sd.csv' )
+
+X_test = pd.read_csv("X_test_feat.csv")
+
+
+
+
+
+
+
+
+
+
 
 
 # Chargeons le modèle
