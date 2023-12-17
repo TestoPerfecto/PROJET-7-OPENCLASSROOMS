@@ -23,17 +23,16 @@ shap.getjs()
 # from streamlit.hashing import _CodeHasher
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
-#df = pd.read_csv("Housing.csv")
-
-PATH = 'C:/Users/PERFECTO/'
+#PATH = 'C:/Users/PERFECTO/'
 
 # Chargeons les datasets
 
 #X_train_1 = pd.read_csv('X_train_smtomek_sd.csv')
-# On scinde 'X_train_smtomek_sd.csv' trop volumineux en 2
+# On scinde 'X_train_smtomek_sd.csv' trop volumineux en 3
 X_tr_1 = pd.read_csv('X_train_smtomek_sd_1.csv')
 X_tr_2 = pd.read_csv('X_train_smtomek_sd_2.csv')
-X_train_1 = pd.concat([X_tr_1,X_tr_2])
+X_tr_3 = pd.read_csv('X_train_smtomek_sd_3.csv')
+X_train_1 = pd.concat([X_tr_1,X_tr_2,X_tr_3])
 y_train_1 = pd.read_csv('y_train_smtomek_sd.csv')
 
 #X_valid_1 = pd.read_csv('X_valid_smtomek_sd.csv')
@@ -44,15 +43,6 @@ X_valid_1 = pd.concat([X_vl_1,X_vl_2])
 y_valid_1 = pd.read_csv('y_valid_smtomek_sd.csv' )
 
 X_test = pd.read_csv("X_test_feat.csv")
-
-
-
-
-
-
-
-
-
 
 
 
@@ -124,8 +114,8 @@ if page == pages[0]:
     st.write("### Demande de crédit")
     st.write("##### La société financière 'Prêt à dépenser' propose des crédits à la consommation ")
     st.write("##### Vous avez sollicité un prêt auprès de notre société en remplissant un formulaire de renseignement.") 
-    st.write("##### Nous allons ensemble étudier votre dossier et vous apporter une réponse.") 
-    st.write("##### Toute réponse vous sera expliquée avec la plus grande clarté.")
+    st.write("##### Nous avons étudier votre dossier et vous fournissons une réponse.") 
+    st.write("##### Notre décision vous sera expliquée avec la plus grande clarté.")
     st.image("Credit_score.png")
     
 elif page == pages[1]:
