@@ -49,7 +49,7 @@ X_test = pd.read_csv("X_test_feat.csv")
 
 # Chargeons le modèle
 
-mon_best_model = joblib.load(PATH+'model_7.pkl')
+mon_best_model = joblib.load(./'model_7.pkl')
 
 ## La prédiction
 y_pred_model = mon_best_model.predict(X_test)
