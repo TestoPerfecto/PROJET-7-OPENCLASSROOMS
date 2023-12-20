@@ -6,18 +6,18 @@ Created on Fri Nov 17 16:56:25 2023
 """
 
 # -*- coding: utf-8 -*-
-
 import streamlit as st
-from streamlit_shap import st_shap
-
 import pandas as pd
 import numpy as np
 import seaborn as sns 
 import matplotlib.pyplot as plt
-
 import joblib
 import shap
+import lightgbm
+
 from xplotter.insights import plot_aggregation
+from lightgbm import LGBMClassifier
+from streamlit_shap import st_shap
 
 shap.initjs()
 shap.getjs()
