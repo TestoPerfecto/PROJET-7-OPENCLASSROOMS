@@ -8,7 +8,8 @@ Created on Fri Nov 17 16:56:25 2023
 # -*- coding: utf-8 -*-
 
 import streamlit as st
-#from streamlit-shap import st_shap
+from streamlit_shap import st_shap
+
 import pandas as pd
 import numpy as np
 import seaborn as sns 
@@ -23,7 +24,7 @@ shap.getjs()
 # from streamlit.hashing import _CodeHasher
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
-#PATH = 'C:/Users/PERFECTO/'
+PATH = 'C:/Users/PERFECTO/PROJET_7_Streamlit/'
 
 # Chargeons les datasets
 
@@ -48,7 +49,7 @@ X_test = pd.read_csv("X_test_feat.csv")
 
 # Chargeons le modèle
 
-mon_best_model = joblib.load('model_7.pkl')
+mon_best_model = joblib.load(PATH+'model_7.pkl')
 
 ## La prédiction
 y_pred_model = mon_best_model.predict(X_test)
