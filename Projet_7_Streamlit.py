@@ -115,7 +115,7 @@ if page == pages[0]:
     st.write("### Demande de crédit")
     st.write("##### La société financière 'Prêt à dépenser' propose des crédits à la consommation ")
     st.write("##### Vous avez sollicité un prêt auprès de notre société en remplissant un formulaire de renseignement.") 
-    st.write("##### Nous avons étudier votre dossier et vous fournissons une réponse.") 
+    st.write("##### Nous avons étudié votre dossier et vous fournissons une réponse.") 
     st.write("##### Notre décision vous sera expliquée avec la plus grande clarté.")
     st.image("Credit_score.png")
     
